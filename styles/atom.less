@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: @font-size;
+}
+
+atom-workspace.theme-atom-blue-jeans-ui {
+	background-color: darken(@background-base-color, 5%);
+	background-image: url("atom://atom-blue-jeans-ui/assets/img/45-degree-fabric-dark.png");
+}
+
+
+// Scrollbars ------------------------------------
+.theme-atom-blue-jeans-ui {
+
+	&.scrollbars-visible-always {
+		/deep/ ::-webkit-scrollbar {
+		    width: 10px;
+		    height: 10px;
+		}
+
+		atom-text-editor /deep/ ::-webkit-scrollbar-corner,
+		/deep/ ::-webkit-scrollbar-corner,
+		atom-text-editor /deep/ ::-webkit-scrollbar-track,
+		/deep/ ::-webkit-scrollbar-track {
+		    background: @scrollbar-background-color;
+		}
+
+		atom-text-editor /deep/ ::-webkit-scrollbar-thumb,
+		/deep/ ::-webkit-scrollbar-thumb {
+		    border-radius: 5px;
+		    background: @scrollbar-color;
+			border: 3px solid @scrollbar-background-color;
+			background-clip: content-box;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+@custom-color: rgba(214, 0, 54, 1);
+// Text Colors
+@text-color: hsl(0, 0%, 50%);
+@text-color-subtle: hsl(0, 0%, 60%);
+@text-color-highlight: hsl(0, 0%, 80%);
+@text-color-selected: hsl(0, 0%, 100%);
+@text-color-info: hsla(223, 64%, 40%, 1);
+@text-color-success: hsla(100, 64%, 40%, 1);
+@text-color-warning: hsla(20, 64%, 49%, 1);
+@text-color-error: hsla(352, 64%, 41%, 1);
+// Background colors
+@background-color-info: hsla(223, 64%, 40%, 1);
+@background-color-success: hsla(100, 64%, 40%, 1);
+@background-color-warning: hsla(20, 64%, 49%, 1);
+@background-color-error: hsla(352, 64%, 41%, 1);
+@background-color-highlight: lighten(@base-background-color, 25%);
+@background-color-selected: @custom-color;
+@app-background-color: darken(@base-background-color, 5%);
+// Base colors
+@background-base-color: hsla(241, 100%, 7%, 1);
+@base-background-color: hsla(0, 0%, 3%, 1);
+@base-border-color: @base-background-color;
+// Component colors
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
+@input-background-color: @app-background-color;
+@input-border-color: @base-border-color;
+@tool-panel-background-color: transparent; // @base-background-color;
+@tool-panel-border-color: @custom-color;
+
+@inset-panel-background-color: lighten(@base-background-color, 4%);
+@inset-panel-border-color: @custom-color;
+@panel-heading-background-color: lighten(@base-background-color, 4%);
+@panel-heading-border-color: @base-border-color;
+@overlay-background-color: lighten(@base-background-color, 5%);
+@overlay-border-color: @base-border-color;
+@button-background-color: lighten(@base-background-color, 2%);
+@button-background-color-hover: lighten(@button-background-color, 12%);
+@button-background-color-selected: @button-background-color-hover;
+@button-border-color: @custom-color;
+@tab-bar-background-color: transparent; // @base-background-color;
+@tab-bar-border-color: @base-border-color;
+@tab-background-color: @tab-bar-background-color;
+@tab-background-color-active: @custom-color;
+@tab-border-color: @base-border-color;
+@tree-view-background-color: transparent; // @base-background-color;
+@tree-view-border-color: @base-border-color;
+// Site colors
+@ui-site-color-1: hsla(223, 64%, 40%, 1);  // blue
+@ui-site-color-2: hsla(100, 64%, 40%, 1);  // green
+@ui-site-color-3: hsla(20, 64%, 49%, 1);   // orange
+@ui-site-color-4: hsla(332, 64%, 40%, 1);  // pink
+@ui-site-color-5: yellow;   // yellow
+// Sizes
+@font-size: 11px;
+@input-font-size: 11px;
+@disclosure-arrow-size: 10px;
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 12px;
+@component-line-height: 27px;
+@tab-height: 50px;
+// Misc
+@component-border-radius: 2px;
+@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+// Scrollbar
+@scrollbar-color: @custom-color;
+@scrollbar-background-color: transparent; // @base-background-color; // replaced `transparent` with a solid color to test https://github.com/atom/one-light-ui/issues/4
+@scrollbar-color-editor: @custom-color;
+@scrollbar-background-color-editor: transparent; // @base-background-color;
+// Git
+@text-color-added:    @text-color-success;  // green
+@text-color-ignored:  @text-color-subtle;   // faded
+@text-color-modified: @text-color-warning;  // orange
+@text-color-removed:  @text-color-error;    // red
+@text-color-renamed:  @text-color-info;     // blue

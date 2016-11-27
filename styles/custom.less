@@ -1,0 +1,121 @@
+.theme-atom-blue-jeans-ui {
+    .badge,
+    .deprecation-cop .deprecation-info:hover,
+    .list-group .selected::before,
+    .list-group li.selected,
+    .list-tree .selected::before,
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:focus,
+    .nav-pills > li.active > a:hover,
+    .settings-view .config-menu .nav > li.active > a,
+    .settings-view .keybinding-panel .is-user,
+    .styleguide [data-name="variables"] .is-color.background-color-selected:before,
+    .styleguide [data-name="variables"] .is-color.button-border-color:before,
+    .styleguide [data-name="variables"] .is-color.inset-panel-border-color:before,
+    .styleguide [data-name="variables"] .is-color.tab-background-color-active:before,
+    .styleguide [data-name="variables"] .is-color.tool-panel-border-color:before,
+    .tab-bar .tab.active,
+    atom-text-editor[mini] .selection .region,
+    atom-text-editor[mini]::shadow .selection .region {
+        background-color: @custom-color;
+    }
+
+    .scrollbars-visible-always atom-text-editor::-webkit-scrollbar-thumb,
+    .scrollbars-visible-always::-webkit-scrollbar-thumb,
+    .tooltip .keystroke,
+    atom-text-editor atom-text-editor-minimap::shadow .minimap-scroll-indicator,
+    atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-scroll-indicator,
+    html atom-text-editor-minimap::shadow .minimap-scroll-indicator {
+        background: @custom-color;
+    }
+
+    .pigments-sampler .background-color-selected,
+    .pigments-sampler .button-border-color,
+    .pigments-sampler .inset-panel-border-color,
+    .pigments-sampler .tab-background-color-active,
+    .pigments-sampler .tool-panel-border-color {
+        color: @custom-color;
+    }
+
+    .settings-view select.form-control {
+        border-color: @custom-color;
+    }
+
+    .input-select,
+    .styleguide .example .example-code,
+    .styleguide .example .example-rendered {
+        border: 1px solid @custom-color;
+    }
+
+    .section.bordered,
+    section.bordered {
+        border-bottom: 1px solid @custom-color;
+    }
+
+    .btn-group > .btn {
+        border-left: 1px solid @custom-color;
+        border-right: 1px solid @custom-color;
+    }
+
+    .projects-tab {
+        display: block;
+        position: relative;
+        background: @custom-color;
+        color: @text-color-selected;
+        text-transform: uppercase;
+        height: @tab-height;
+        line-height: @tab-height;
+        pointer-events: none;
+        z-index: 100;
+
+        span::after {
+            padding: 0 1rem;
+            content: '🚀 projects';
+        }
+    }
+
+    .tree-view {
+
+        .list-nested-item.directory {
+            .list-item:not(.selected):hover {
+                color: darken(@ui-site-color-5, 13%);
+
+                &::after {
+                    content: '';
+                    background: fadeout(lighten(@app-background-color, 10%), 60%);
+                    position: absolute;
+                    left: -50%;
+                    right: -10px;
+                    height: @component-line-height;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .list-item.file.entry:not(.selected):hover {
+            color: @text-color-selected;
+            transition: all .1s ease-in-out;
+            margin-left: 20px;
+            &::after {
+                content: '';
+                background: fadeout(lighten(@app-background-color, 10%), 60%);
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: @component-line-height;
+                z-index: -1;
+                border-left: 3px solid @custom-color;
+            }
+        }
+    }
+
+    .tab-bar {
+        .tab:not(.active) {
+            &:hover {
+                // background-color: fadeout(lighten(@app-background-color, 5%), 20%);
+                color: @text-color-selected;
+                border-bottom: 3px solid @custom-color;
+            }
+        }
+    }
+}
