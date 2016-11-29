@@ -38,35 +38,39 @@
     }
 
     .settings-view select.form-control {
-        border-color: @custom-color;
+        border-color: transparent;
     }
 
     .input-select,
     .styleguide .example .example-code,
     .styleguide .example .example-rendered {
-        border: 1px solid @custom-color;
+        border: 1px solid transparent;
     }
 
     .section.bordered,
     section.bordered {
-        border-bottom: 1px solid @custom-color;
+        border-bottom: 1px solid transparent;
     }
 
     .btn-group > .btn {
-        border-left: 1px solid @custom-color;
-        border-right: 1px solid @custom-color;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
     }
 
     .projects-tab {
         display: block;
         position: relative;
         background: @custom-color;
-        color: @text-color-selected;
+        color: black;
+        font-weight: bold;
         text-transform: uppercase;
         height: @tab-height;
         line-height: @tab-height;
         pointer-events: none;
         z-index: 100;
+        background-color: darken(@ui-site-color-5, 13%);
+        white-space: nowrap;
+        letter-spacing: .7em;
 
         span::after {
             padding: 0 1rem;
@@ -78,13 +82,13 @@
 
         .list-nested-item.directory {
             .list-item:not(.selected):hover {
-                color: darken(@ui-site-color-5, 13%);
+                color: darken(@ui-site-color-5, 13%) !important;
 
                 &::after {
                     content: '';
-                    background: fadeout(lighten(@app-background-color, 10%), 60%);
+                    background: fadein(@custom-color, 0%);
                     position: absolute;
-                    left: -50%;
+                    left: -100%;
                     right: -10px;
                     height: @component-line-height;
                     z-index: -1;
@@ -93,29 +97,64 @@
         }
 
         .list-item.file.entry:not(.selected):hover {
-            color: @text-color-selected;
+            cursor: pointer;
+            color: @text-color-selected !important;
             transition: all .1s ease-in-out;
             margin-left: 20px;
             &::after {
                 content: '';
-                background: fadeout(lighten(@app-background-color, 10%), 60%);
+                background: fadein(@custom-color, 0%);
                 position: absolute;
                 left: 0;
                 right: 0;
                 height: @component-line-height;
                 z-index: -1;
-                border-left: 3px solid @custom-color;
+                border-left: 3px solid darken(@ui-site-color-5, 13%);
+            }
+        }
+
+        .list-item.file.entry.selected {
+            color: darken(@ui-site-color-5, 13%) !important;
+            margin-left: 20px;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                height: @component-line-height;
+                border-left: 3px solid darken(@ui-site-color-5, 13%);
             }
         }
     }
 
     .tab-bar {
+        cursor: pointer;
+
+        .close-icon {
+            color: darken(@ui-site-color-5, 13%);
+        }
+
         .tab:not(.active) {
-            &:hover {
-                // background-color: fadeout(lighten(@app-background-color, 5%), 20%);
-                color: @text-color-selected;
-                border-bottom: 3px solid @custom-color;
+
+            .close-icon {
+                display: none;
             }
+
+            &:hover {
+                color: @text-color-selected;
+                border-bottom: 2px solid darken(@ui-site-color-5, 13%);
+                background: fadein(@custom-color, 0%);
+                transition: all .1s ease-in-out;
+
+                .close-icon {
+                    display: block;
+                }
+            }
+        }
+
+        .tab.active {
+            border-bottom: 2px solid darken(@ui-site-color-5, 13%);
         }
     }
 }
