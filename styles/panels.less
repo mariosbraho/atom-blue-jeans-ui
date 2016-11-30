@@ -11,7 +11,9 @@
         background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
 
         .panel-heading {
-            background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+            background-color: @custom-yellow;
+            color: black;
+            font-weight: bold;
         }
     }
     // Modal -------------------
@@ -36,7 +38,37 @@
 
             > div > div {
                 background: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+                border: 1px solid @custom-yellow !important;
             }
         }
+    }
+
+    .settings-view {
+        .section {
+            border: none;
+        }
+
+        select.form-control {
+            border-color: @custom-yellow;
+            background-color: fadeout(lighten(@inset-panel-background-color, 4%), 30%);
+        }
+    }
+
+    .styleguide-sections > section.collapsed > .section-heading:hover {
+        background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+    }
+
+    .config-menu {
+        background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+        border: none;
+    }
+
+    .package-card {
+        background: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+        border: 1px solid @custom-yellow;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        background-color: rgba(255, 255, 255, 0.07) !important;
     }
 }
