@@ -52,11 +52,6 @@
         border-bottom: 1px solid transparent;
     }
 
-    .btn-group > .btn {
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-    }
-
     .projects-tab {
         display: block;
         position: relative;
@@ -68,7 +63,7 @@
         line-height: @tab-height;
         pointer-events: none;
         z-index: 100;
-        background-color: darken(@ui-site-color-5, 13%);
+        background-color: @custom-yellow;
         white-space: nowrap;
         letter-spacing: .7em;
 
@@ -80,9 +75,13 @@
 
     .tree-view {
 
+        .project-root > .list-item {
+            font-size: 1.2em;
+        }
+
         .list-nested-item.directory {
             .list-item:not(.selected):hover {
-                color: darken(@ui-site-color-5, 13%) !important;
+                color: @custom-yellow !important;
 
                 &::after {
                     content: '';
@@ -109,12 +108,12 @@
                 right: 0;
                 height: @component-line-height;
                 z-index: -1;
-                border-left: 3px solid darken(@ui-site-color-5, 13%);
+                border-left: 3px solid @custom-yellow;
             }
         }
 
         .list-item.file.entry.selected {
-            color: darken(@ui-site-color-5, 13%) !important;
+            color: @custom-yellow !important;
             margin-left: 20px;
             &::after {
                 content: '';
@@ -123,7 +122,7 @@
                 right: 0;
                 z-index: -1;
                 height: @component-line-height;
-                border-left: 3px solid darken(@ui-site-color-5, 13%);
+                border-left: 3px solid @custom-yellow;
             }
         }
     }
@@ -132,7 +131,7 @@
         cursor: pointer;
 
         .close-icon {
-            color: darken(@ui-site-color-5, 13%);
+            color: @custom-yellow;
         }
 
         .tab:not(.active) {
@@ -143,7 +142,7 @@
 
             &:hover {
                 color: @text-color-selected;
-                border-bottom: 2px solid darken(@ui-site-color-5, 13%);
+                border-bottom: 2px solid @custom-yellow;
                 background: fadein(@custom-color, 0%);
                 transition: all .1s ease-in-out;
 
@@ -154,7 +153,7 @@
         }
 
         .tab.active {
-            border-bottom: 2px solid darken(@ui-site-color-5, 13%);
+            border-bottom: 2px solid @custom-yellow;
         }
     }
 }

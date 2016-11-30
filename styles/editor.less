@@ -9,20 +9,21 @@
       padding-left: @component-padding/2;
       color: @text-color;
       border-radius: @component-border-radius;
-      // background-color: @input-background-color;
+      // background-color: transparent;
+      border-bottom: 1px solid @custom-yellow;
 
       &.is-focused {
-        // background-color: darken(@input-background-color, 5%);
+        // background-color: lighten(@background-base-color, 5%);
       }
 
       &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
       &::shadow {
         .placeholder-text {
-          padding-left: @component-padding/2;
+          // padding-left: @component-padding/2;
           color: @text-color-subtle;
         }
         .selection .region {
-          padding-left: @component-padding/2;
+          // padding-left: @component-padding/2;
           background-color: @background-color-selected;
         }
       }

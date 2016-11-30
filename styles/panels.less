@@ -1,28 +1,42 @@
-
 // Panels
 // -------------------
-
 // Overrides: atom/static/panels.less
 .theme-atom-blue-jeans-ui {
     .panel-heading {
-      border-bottom: 1px solid transparent;
-      background-color: @panel-heading-background-color;
+        border-bottom: 1px solid transparent;
+        background-color: @panel-heading-background-color;
     }
 
     .inset-panel {
-      background-color: @inset-panel-background-color;
-      .panel-heading {
-        background-color: lighten(@inset-panel-background-color, 4%);
-      }
+        background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+
+        .panel-heading {
+            background-color: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+        }
     }
-
-
     // Modal -------------------
     // Used on top of the editor, like the Command Palette.
-
     atom-panel.modal {
-      border: 1px solid @overlay-border-color;
-      border-top: none;
-      box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+        border: 1px solid @overlay-border-color;
+        border-top: none;
+        box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+    }
+
+    atom-pane-container atom-pane .item-views .pane-item {
+        background-color: transparent;
+    }
+
+    .styleguide {
+        .styleguide-header {
+            border: none;
+        }
+
+        .styleguide-sections > section {
+            background-color: transparent;
+
+            > div > div {
+                background: fadeout(lighten(@inset-panel-background-color, 4%), 60%);
+            }
+        }
     }
 }
