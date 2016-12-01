@@ -1,8 +1,10 @@
 # Atom Blue Jeans UI
 
-A dark blue UI for Atom created with <img src="http://66.media.tumblr.com/avatar_e92a426a1826_128.png" alt="love" width="12" height="12"/>. It suits quite well with `atom-blue-jeans-syntax`.
+A dark blue UI for Atom created with <img src="http://66.media.tumblr.com/avatar_e92a426a1826_128.png" alt="love" width="12" height="12"/>.
 
-![A screenshot of your theme](https://i.imgsafe.org/8cdcf9b7cc.png)
+It suits quite well with [atom-blue-jeans-syntax](https://github.com/mariosbraho/atom-blue-jeans-syntax).
+
+![A screenshot of your theme](https://i.imgsafe.org/075988c531.png)
 
 ### Installation
 **<img src="https://atom.io/favicon.ico" width="14" height="14" /> Open a terminal and type**
