@@ -4,7 +4,7 @@ A dark blue UI for Atom created with <img src="http://66.media.tumblr.com/avatar
 
 It suits quite well with [atom-blue-jeans-syntax](https://github.com/mariosbraho/atom-blue-jeans-syntax).
 
-![A screenshot of your theme](https://i.imgsafe.org/07d27586c0.png)
+![Theme screenshot](https://i.imgsafe.org/07d27586c0.png)
 
 ### Installation
 **<img src="https://atom.io/favicon.ico" width="14" height="14" /> Open a terminal and type**
