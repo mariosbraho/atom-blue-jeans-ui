@@ -1,31 +1,19 @@
-
-// Mini Editor
-// -------------------
-
-// Mini Editors are the "text inputs" used in find+replace or in the settings.
-
 .theme-atom-blue-jeans-ui {
     atom-text-editor[mini] {
-      padding-left: @component-padding/2;
-      color: @text-color;
-      border-radius: @component-border-radius;
-      // background-color: transparent;
-      border-bottom: 1px solid @custom-yellow;
+        padding-left: @component-padding/2;
+        color: @text-color;
+        border-radius: @component-border-radius;
+        border-bottom: 1px solid @custom-yellow;
 
-      &.is-focused {
-        // background-color: lighten(@background-base-color, 5%);
-      }
+        &.is-focused {}
+        &::shadow {
+            .placeholder-text {
+                color: @text-color-subtle;
+            }
 
-      &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
-      &::shadow {
-        .placeholder-text {
-          // padding-left: @component-padding/2;
-          color: @text-color-subtle;
+            .selection .region {
+                background-color: @background-color-selected;
+            }
         }
-        .selection .region {
-          // padding-left: @component-padding/2;
-          background-color: @background-color-selected;
-        }
-      }
     }
 }

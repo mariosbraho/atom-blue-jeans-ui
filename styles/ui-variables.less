@@ -1,4 +1,4 @@
-@custom-color: fadeout(white, 93%); 
+@custom-color: fadeout(white, 93%);
 // Text Colors
 @text-color: hsl(0, 0%, 65%);
 @text-color-subtle: hsl(0, 0%, 60%);
@@ -25,7 +25,7 @@
 @pane-item-border-color: @base-border-color;
 @input-background-color: @app-background-color;
 @input-border-color: @base-border-color;
-@tool-panel-background-color: transparent; // @base-background-color;
+@tool-panel-background-color: transparent;
 @tool-panel-border-color: @custom-color;
 
 @inset-panel-background-color: lighten(@base-background-color, 4%);
@@ -38,12 +38,12 @@
 @button-background-color-hover: lighten(@button-background-color, 12%);
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color: @custom-color;
-@tab-bar-background-color: transparent; // @base-background-color;
+@tab-bar-background-color: transparent;
 @tab-bar-border-color: @base-border-color;
 @tab-background-color: @tab-bar-background-color;
 @tab-background-color-active: @custom-color;
 @tab-border-color: @base-border-color;
-@tree-view-background-color: transparent; // @base-background-color;
+@tree-view-background-color: transparent;
 @tree-view-border-color: @base-border-color;
 // Site colors
 @ui-site-color-1: hsla(223, 64%, 40%, 1);  // blue
@@ -65,13 +65,13 @@
 @font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
 // Scrollbar
 @scrollbar-color: @custom-color;
-@scrollbar-background-color: transparent; // @base-background-color; // replaced `transparent` with a solid color to test https://github.com/atom/one-light-ui/issues/4
+@scrollbar-background-color: transparent;
 @scrollbar-color-editor: @custom-color;
-@scrollbar-background-color-editor: transparent; // @base-background-color;
+@scrollbar-background-color-editor: transparent;
 // Git
-@text-color-added:    @text-color-success;  // green
-@text-color-ignored:  @text-color-subtle;   // faded
+@text-color-added: @text-color-success;  // green
+@text-color-ignored: @text-color-subtle;   // faded
 @text-color-modified: @text-color-warning;  // orange
-@text-color-removed:  @text-color-error;    // red
-@text-color-renamed:  @text-color-info;     // blue
+@text-color-removed: @text-color-error;    // red
+@text-color-renamed: @text-color-info;     // blue
 @custom-yellow: darken(@ui-site-color-5, 13%);

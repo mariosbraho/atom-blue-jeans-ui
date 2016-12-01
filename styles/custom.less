@@ -59,7 +59,7 @@
         z-index: 100;
         background-color: @custom-yellow;
         white-space: nowrap;
-        letter-spacing: .7em;
+        letter-spacing: 0.7em;
 
         span::after {
             padding: 0 1rem;
@@ -68,7 +68,6 @@
     }
 
     .tree-view {
-
         .project-root > .list-item {
             font-size: 1.2em;
         }
@@ -92,8 +91,9 @@
         .list-item.file.entry:not(.selected):hover {
             cursor: pointer;
             color: @text-color-selected !important;
-            transition: all .1s ease-in-out;
+            transition: all 0.1s ease-in-out;
             margin-left: 20px;
+
             &::after {
                 content: '';
                 background: fadein(@custom-color, 0%);
@@ -109,6 +109,7 @@
         .list-item.file.entry.selected {
             color: @custom-yellow !important;
             margin-left: 20px;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -129,7 +130,6 @@
         }
 
         .tab:not(.active) {
-
             .close-icon {
                 display: none;
             }
@@ -138,7 +138,7 @@
                 color: @text-color-selected;
                 border-bottom: 2px solid @custom-yellow;
                 background: fadein(@custom-color, 0%);
-                transition: all .1s ease-in-out;
+                transition: all 0.1s ease-in-out;
 
                 .close-icon {
                     display: block;

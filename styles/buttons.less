@@ -1,11 +1,9 @@
-// Buttons
-// -------------------
-// Overrides: atom/atom/static/buttons.less
 .theme-atom-blue-jeans-ui {
     .btn {
         color: black;
         background-color: @custom-yellow;
         font-weight: bold;
+
         &:focus,
         &:hover {
             color: @text-color-highlight;
@@ -27,7 +25,7 @@
             outline: none;
         }
     }
-    // Colored buttons -----------------------
+
     .btn.btn-primary {
         .btn-color(@background-color-info);
     }
@@ -52,6 +50,7 @@
         color: @text-color-selected;
         background-color: @bg;
 
+        &.selected,
         &:focus,
         &:hover {
             background-color: lighten(@bg, 4%);
@@ -61,16 +60,12 @@
             background-color: darken(@bg, 4%);
         }
 
-        &.selected {
-            background-color: lighten(@bg, 4%);
-        }
-
         &.selected:focus,
         &.selected:hover {
             background-color: lighten(@bg, 8%);
         }
     }
-    // Button Group -----------------------
+
     .btn-group > .btn {
         border-color: transparent;
     }
