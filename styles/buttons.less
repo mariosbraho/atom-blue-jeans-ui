@@ -1,23 +1,23 @@
 .theme-atom-blue-jeans-ui {
     .btn {
-        color: black;
-        background-color: @custom-yellow;
-        font-weight: bold;
+        color: @custom-yellow;
+        background: @custom-color;
+        // border-bottom: 1px solid @custom-yellow !important;
 
         &:focus,
         &:hover {
-            color: @text-color-highlight;
-            background-color: fadein(@custom-color, 0%);
+            color: @custom-yellow;
+            background-color: fadein(@custom-color, 10%);
         }
 
         &:active {
             color: fade(@text-color-selected, 66%);
-            background-color: darken(@button-background-color, 2%);
+            background-color: darken(@button-background-color, 12%);
         }
 
         &.selected {
-            color: @text-color-selected;
-            background-color: fadein(@custom-color, 0%);
+            color: @custom-yellow;
+            background-color: fadein(@custom-color, 40%);
         }
 
         &:focus,
