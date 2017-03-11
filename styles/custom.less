@@ -15,17 +15,16 @@
     .styleguide [data-name="variables"] .is-color.tab-background-color-active:before,
     .styleguide [data-name="variables"] .is-color.tool-panel-border-color:before,
     .tab-bar .tab.active,
-    atom-text-editor[mini] .selection .region,
-    atom-text-editor[mini]::shadow .selection .region {
+    atom-text-editor[mini] .selection .region {
         background-color: @custom-color;
     }
 
     .scrollbars-visible-always atom-text-editor::-webkit-scrollbar-thumb,
     .scrollbars-visible-always::-webkit-scrollbar-thumb,
     .tooltip .keystroke,
-    atom-text-editor atom-text-editor-minimap::shadow .minimap-scroll-indicator,
-    atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-scroll-indicator,
-    html atom-text-editor-minimap::shadow .minimap-scroll-indicator {
+    atom-text-editor atom-text-editor-minimap.editor .minimap-scroll-indicator,
+    atom-text-editor.editor atom-text-editor-minimap.editor .minimap-scroll-indicator,
+    html atom-text-editor-minimap.editor .minimap-scroll-indicator {
         background: @custom-color;
     }
 
@@ -50,14 +49,14 @@
         display: block;
         position: relative;
         background: @custom-color;
-        color: black;
+        color: white;
         font-weight: bold;
         text-transform: uppercase;
         height: @tab-height;
         line-height: @tab-height;
         pointer-events: none;
         z-index: 100;
-        background-color: @custom-yellow;
+        border-bottom: 2px solid darken(#bff337, 0%);
         white-space: nowrap;
         letter-spacing: 0.7em;
 

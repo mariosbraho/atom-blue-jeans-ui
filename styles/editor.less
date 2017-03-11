@@ -5,15 +5,12 @@
         border-radius: @component-border-radius;
         border-bottom: 1px solid @custom-yellow;
 
-        &.is-focused {}
-        &::shadow {
-            .placeholder-text {
-                color: @text-color-subtle;
-            }
+        .placeholder-text {
+            color: @text-color-subtle;
+        }
 
-            .selection .region {
-                background-color: @background-color-selected;
-            }
+        .selection .region {
+            background-color: @background-color-selected;
         }
     }
 }
