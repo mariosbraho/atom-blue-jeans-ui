@@ -2,7 +2,7 @@
 
 A dark blue UI for Atom created with <img src="http://66.media.tumblr.com/avatar_e92a426a1826_128.png" alt="love" width="12" height="12"/>
 
-It suits quite well with [atom-blue-jeans-syntax](https://atom.io/packages/atom-blue-jeans-syntax).
+It fits quite well with [atom-blue-jeans-syntax](https://atom.io/packages/atom-blue-jeans-syntax).
 
 ![Theme screenshot](http://i.imgur.com/GRtHMVm.png)
 
