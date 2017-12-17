@@ -3,7 +3,7 @@
 A dark blue UI for Atom.
 It can be used in combination with [atom-blue-jeans-syntax](https://atom.io/packages/atom-blue-jeans-syntax).
 
-![Theme screenshot](http://i.imgur.com/GRtHMVm.png)
+![Theme screenshot](https://i.imgur.com/3JHqtC2.png)
 
 ### Installation
 **<img src="https://atom.io/favicon.ico" width="14" height="14" /> Open a terminal and type**
